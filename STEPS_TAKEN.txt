@@ -1,0 +1,55 @@
+STEPS TAKEN TO SETUP PYTORCH CHATBOT
+====================================
+
+1.  **Project Location**:
+    -   Located the project in `c:\Users\lenovo\Desktop\pytorch-chatbot-master\pytorch-chatbot-master`.
+
+2.  **Environment Setup**:
+    -   Created a Python virtual environment named `venv` to isolate dependencies.
+    -   Command used: `python -m venv venv`
+
+3.  **Dependency Installation**:
+    -   Activated the virtual environment.
+    -   Installed the required libraries: `torch` (PyTorch) and `nltk` (Natural Language Toolkit).
+    -   Command: `pip install torch nltk`
+
+4.  **NLTK Data Setup**:
+    -   Downloaded the necessary 'punkt' tokenizer data for NLTK.
+    -   Command: `python -c "import nltk; nltk.download('punkt')"`
+
+5.  **Model Training**:
+    -   Ran the training script to resolve patterns and responses from `intents.json`.
+    -   This generated the `data.pth` file (the trained model).
+    -   Command: `python train.py`
+
+6.  **Verification**:
+    -   Ran the chatbot script to ensure it replies correctly.
+    -   Command: `python chat.py`
+
+7.  **Automation**:
+    -   Created `run_chatbot.bat` so you can run the chatbot with a single double-click.
+
+HOW TO RUN
+==========
+Double-click `run_chatbot.bat` inside the `pytorch-chatbot-master` folder.
+OR
+Open a terminal, navigate to the folder, and run:
+`.\venv\Scripts\activate`
+`python chat.py`
+
+FOLDER STRUCTURE
+================
+pytorch-chatbot-master/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── STEPS_TAKEN.txt
+├── __pycache__/
+├── chat.py
+├── data.pth             (Trained model file)
+├── intents.json         (Chat patterns and responses)
+├── model.py             (Neural network model definition)
+├── nltk_utils.py        (NLP utilities)
+├── run_chatbot.bat      (Shortcut to run the bot)
+├── train.py             (Training script)
+└── venv/                (Virtual environment folder)
